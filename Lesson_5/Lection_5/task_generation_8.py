@@ -1,6 +1,6 @@
 """генерация словарей"""
 
-my_dictcomp = {i: chr(i) for i in range(97,123)}
+my_dictcomp = {key: chr(key) for key in range(97,123)}
 print(my_dictcomp)
 for number,char in my_dictcomp.items():
-    print(f'dict[{number}] = {char}')
+    print(f'{number} => {char}')
