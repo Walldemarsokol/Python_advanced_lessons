@@ -5,7 +5,10 @@
 """
 
 text = 'Hello,world'
-result = {}
-for i in text:
-    result[i] = ord(i)
-print(result)
+def dict_off(text):
+    result = {}
+    for i in text:
+        result[i] = ord(i)
+    return result
+
+print(dict_off(text))
