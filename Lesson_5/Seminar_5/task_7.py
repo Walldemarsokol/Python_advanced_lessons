@@ -9,8 +9,6 @@ n = int(input("enter nuiber: "))
 def generator(n):
     for i in range(2,n):
         check = False
-        # if i in (2,3,5):
-        #     yield i
         for j in range(2,int(i**0.5)+1):
             if i%j==0:
                 check = True
