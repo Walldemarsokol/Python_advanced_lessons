@@ -7,6 +7,6 @@
 попытки исчерпаны.
 """
 
-from module_1 import module_2_up2
+from module_1 import mistery
 
 module_2_up.keys_of_mystery()

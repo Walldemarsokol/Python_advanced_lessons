@@ -11,7 +11,7 @@
 Проверку года на високосность вынести в отдельную защищенную функцию.
 """
 
-def __CheckLeap(year):
+def __checkLeap(year):
   if((year % 400 == 0) or (year % 100 != 0) and (year % 4 == 0)):
       dates_leap = {'01': 31, '02': 29, '03': 31, '04': 30, '05': 31, '06': 30, \
                '07': 31, '08': 31, '09': 30, '10': 31, '11': 30, '12': 31}
@@ -27,7 +27,7 @@ def __CheckLeap(year):
 def date_true(data):
     day,month,year = data.split('.')
     day,month,year = int(day),int(month),int(year)
-    date_dict = __CheckLeap(year)
+    date_dict = __checkLeap(year)
 
     for month_dict,days in date_dict.items():
         if month == int(month_dict) and 0< day <=days:
