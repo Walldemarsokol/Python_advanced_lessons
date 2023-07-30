@@ -1,8 +1,9 @@
 import random
+import sys
 from sys import argv
 
 
-def guess_the_num(min_num, max_num, attempt):
+def guess_the_num(min_num = 10, max_num = 100, attempt = 10):
     # min_num, max_num, attempts = input('Enter min,max and attempts: ').split()
     # min_num, max_num, attempts = int(min_num), int(max_num), int(attempts)
     num = random.randint(min_num,max_num)
@@ -26,6 +27,12 @@ def guess_the_num(min_num, max_num, attempt):
 
 
 if __name__ == "__main__":
-    min_num,max_num,attempts = input('Enter min,max and attempts: ').split()
-    min_num,max_num,attempts = int(min_num),int(max_num),int(attempts)
-    print(guess_the_num(min_num,max_num,attempts))
+    # min_num,max_num,attempts = input('Enter min,max and attempts: ').split()
+    # min_num,max_num,attempts = int(min_num),int(max_num),int(attempts)
+    if len(sys.argv)==2:
+        attempts = int(sys.argv[1])
+    elif len(sys.argv)==4:
+        min_num, max_num, attempts = (int(i) for i in sys.argv[1:])
+    else:
+        print('Not yet arguments.')
+    # print(guess_the_num(min_num,max_num,attempts))
