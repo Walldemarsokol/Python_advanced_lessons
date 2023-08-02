@@ -9,4 +9,4 @@
 
 from module_1 import mistery
 
-module_2_up.keys_of_mystery()
+mistery.keys_of_mystery()
