@@ -12,3 +12,19 @@
 ✔ При достижении конца более короткого файла,
 возвращайтесь в его начало.
 """
+import re
+import math
+
+def some_func(data_1,data_2):
+    files = [data_1,data_2]
+    result = []
+    for i in range(2):
+        with open(files[i], 'r') as f:
+            for j in range(10):
+            # row = f.readline()
+                result.append(f.readline().replace('\n','').replace(' |','').split())
+    return result
+
+
+if __name__ == '__main__':
+    print(some_func('task_1.txt','task_2.txt'))

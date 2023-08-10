@@ -20,4 +20,4 @@ def random_couple(rows):
             file.write(arg + '\n')
 
 if __name__ == '__main__':
-    random_couple(5)
+    random_couple(10)
