@@ -29,4 +29,4 @@ def random_names(count):
 
 
 if __name__ == '__main__':
-    random_names(10)
+    random_names(random.randint(5,10))
