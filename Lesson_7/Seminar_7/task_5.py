@@ -32,29 +32,43 @@ def eny_data_generator(*args):
     extens = {}
     for i in extensions:
         res = 0.5*count
-        extens[i] = random.randint(1,res)
-        count-=res
+        extens[i] = round(random.uniform(1,res))
+        count-=round(random.uniform(1,res))
+
+    print(extens)
+    # file_name = ''
+    # for files in range(quantity + 1):
+    #     file_name = ''
+    #     for _ in range(6,30): #создаем имя файла
+    #         file_name = file_name + chr(random.randint(97, 122))
 
 
-    for files in range(quantity + 1):
-        file_name = ''
-        for _ in range(6,30): #создаем имя файла
-            file_name = file_name + chr(random.randint(97, 122))
-        file = ''
 
-    for i in extensions: #создаем файлы с разным расширением
-
-        file = file_name + "." + extensions[i]
-        os.path.join(os.getcwd(), 'new_dir_for_data', file)
-        with open(file, 'w') as f:
-            for _ in range(256, 4040):
-                bite_value = chr(random.randint(97, 125))
-                print(bite_value, file=f)
-
-        count -= 1
+    for i in range(len(extensions)): #создаем файлы с разным расширением
+        # file_name = ''
+        # num = 0
+        # for files in range(quantity + 1):
+        #     file_name = ''
+        #     for _ in range(6, 30):  # создаем имя файла
+        #         file_name = file_name + chr(random.randint(97, 122))
+        data = extens.get(extensions[i])
+        print(data)
+        for j in range(1, data+1):
+            file_name = ''
+            for files in range(quantity + 1):
+                file_name = ''
+                for _ in range(6, 30):  # создаем имя файла
+                    file_name = file_name + chr(random.randint(97, 122))
+            file = file_name + "." + extensions[i]
+            os.path.join(os.getcwd(), 'new_dir_for_data', file)
+            with open(file, 'w') as f:
+                for _ in range(256, 4040):
+                    bite_value = chr(random.randint(97, 125))
+                    print(bite_value, file=f)
+        # num+=1
 
 
 
 
 if __name__ == '__main__':
-    generator_data('py','txt','xml','doc',50)
+    eny_data_generator('py','txt','xml','doc','50')
