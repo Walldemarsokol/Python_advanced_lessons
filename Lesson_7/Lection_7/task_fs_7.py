@@ -1,11 +1,13 @@
 import os
 from pathlib import Path
-
+#создает путь даже если нет каталога или файла
 #для версии пайтон 3.10>
 file_1 = os.path.join(os.getcwd(),'bin','new_file.txt')
+os.path.join(os.getcwd(),'bin','new_file.txt')
 print(f'{file_1 =}\n{file_1}')
 
 file_2 = Path().cwd() / 'dir' / 'new_file.txt'
+Path().cwd() / 'dir' / 'new_file.txt'
 print(f'{file_2 =}\n{file_2}')
 #для версии пайтон <3.10
 # file_1 = os.path.join(os.getcwd(),'bin','new_file.txt')

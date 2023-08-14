@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 
+#пробегает по директории и проверяет является ли файл ссфлкой,файлом или директорией
 dir_list = os.listdir()
 for obj in dir_list:
     print(f'dir = {os.path.isdir(obj)}',end='\t')
